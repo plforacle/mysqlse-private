@@ -1,0 +1,89 @@
+{
+    "workshoptitle": "MySQL Enterprise Bootcamp",
+    "help": "livelabs-help-**enterarea**_us@oracle.com",
+    "tutorials": [
+        {
+            "title": "Introduction",
+            "description": "Bootcam Introduction",
+            "filename": "../../introduction/introduction.md"
+        },
+        {
+            "title": "Get Started",
+            "description": "First steps",
+            "filename": "../../get-started/get-started.md"
+        },
+        {
+            "title": "Lab 1a: Install MySQL Community",
+            "filename": "../../install-community/install-community.md"
+        },
+        {
+            "title": "Lab 1b: Install MySQL Enterprise",
+            "filename": "../../installation-detailed/installation-detailed.md"
+        },
+        {
+            "title": "Lab 1c: Verify the new MySQL Installation",
+            "filename": "../../verify-installation/verify-installation.md"
+        },
+        {
+            "title": "Lab 1d: MySQL Shell",
+            "filename": "../../mysql-shell/mysql-shell.md"
+        },
+        {
+            "title": "Lab 2: Database Design",
+            "filename": "../../database-design/database-design.md"
+        },
+        {
+            "title": "Lab 3a: User management",
+            "filename": "../../user-management/user-management.md"
+        },
+        {
+            "title": "Lab 3b: MySQL Enterprise Firewall",
+            "filename": "../../enterprise-firewall/enterprise-firewall.md"
+        },
+        {
+            "title": "Lab 3c: MySQL Enterprise Audit",
+            "filename": "../../enterprise-audit/enterprise-audit.md"
+        },
+        {
+            "title": "Lab 3d: MySQL Enterprise Mask and De-identification",
+            "filename": "../../enterprise-datamask/enterprise-datamask.md"
+        },
+        {
+            "title": "Lab 4a: MySQL Logical Backup",
+            "filename": "../../logical-backup/logical-backup.md"
+        },
+        {
+            "title": "Lab 4b: MySQL Enterprise Backup",
+            "filename": "../../enterprise-backup/enterprise-backup.md"
+        },
+        {
+            "title": "Lab 5: MySQL Replication",
+            "filename": "../../replication/replication.md"
+        },
+        {
+            "title": "Lab 6: MySQL InnoDB Cluster",
+            "filename": "../../innodb/innodb.md"
+        },
+        {
+            "title": "Lab 7a: MySQL Enterprise Monitor",
+            "filename": "../../enterprise-monitor-manager/enterprise-monitor-manager.md"
+        },
+        {
+            "title": "Lab 8: MySQL HeatWave",
+            "filename": "../../mysql-heatwave/mysql-heatwave.md"
+        },
+        {
+            "title": "Addendum 1",
+            "filename": "../../addendum/addendum.md"
+        },
+        {
+            "title": "Addendum 2",
+            "filename": "../../addendum-environment/addendum-environment.md"
+        },
+        {
+            "title": "Need Help?",
+            "description": "Solutions to Common Problems and Directions for Receiving Live Help",
+            "filename":"https://oracle-livelabs.github.io/common/labs/need-help/need-help-freetier.md"
+        }
+    ]
+}

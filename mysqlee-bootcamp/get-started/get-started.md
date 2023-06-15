@@ -20,7 +20,6 @@ In this lab, you will be guided through the following tasks:
     The materials include:
     * Lectures slides in pdf
     * lab guide in pdf
-    * configure_labs.sh script 
 
 ## Task 2: Verify connection to the app-srv 
 

@@ -22,7 +22,7 @@ In this lab, you will:
     
     Write it down.
     ```
-    <span style="color:green">shell-app-srv$</span><copy>ifconfig | grep 10.0.0</copy>
+    <span style="color:green">shell-app-srv$</span><copy>ifconfig | grep 10.0</copy>
     ```
     
 2. <span style="color:red">Keep previous connection open and open a new connection </span>to mysql1 server thought app-srv
@@ -137,7 +137,7 @@ In this lab, you will:
 15. (<span style="color:red">appuser connection</span>) Close and reopen connection to mysql-advanced and try to submit a command.
     What changed?
     ```
-    <span style="color:green">shell-app-srv$</span><copy>mysql –u appuser -p -h mysql1 -P 3307</copy>
+    <span style="color:green">shell-app-srv$</span><copy>mysql -uappuser -p -h mysql1 -P 3307</copy>
     ```
     ```
     <span style="color:blue">mysql></span><copy>SHOW DATABASES;</copy>

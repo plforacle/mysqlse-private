@@ -15,7 +15,7 @@ In this lab, you will:
  * The lab can be completed from app-srv
  * Data masking has more functions than what we test in the lab. Find the full list of functions in the Learn More section of this lab.
 
-## Task 1: Enable and test Audit
+## Task 1: Enable and test Datamasking and Deidentification
 
 1. Install the data masking plugin
     ```

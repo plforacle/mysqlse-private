@@ -22,6 +22,14 @@ In this lab, you will:
 
  ![MYSQLEE](images/monitor-set-up.png "monitor set up")
 
+
+If not already connected to the app-srv then do the following
+- Connect with your SSH client using the public IP and the provided ssh Example of connections from Linux, MAC, Windows Powershell
+
+    ```
+    <span style="color:green">shell></span><copy> ssh -i id_rsa_app-srv opc@<public_ip></copy>
+    ```
+
 1. Now we install the service. If not already connected, connect to app-srv with your SSH client
 2. Install the MySQL Enterprise Monitor Service Manager on app-srv
     ```

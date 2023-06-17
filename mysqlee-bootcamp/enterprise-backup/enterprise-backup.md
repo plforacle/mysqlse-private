@@ -48,7 +48,7 @@ In this lab, you will:
     ```
 5. Create a second backup with compression 
     ```
-    <span style="color:green">shell></span><copy>mysqlbackup --port=3307 --host=127.0.0.1 --protocol=tcp --user=mysqlbackup --password --backup- dir=/backupdir/compressed --compress backup-and-apply-log</copy>
+    <span style="color:green">shell></span><copy>mysqlbackup --port=3307 --host=127.0.0.1 --protocol=tcp --user=mysqlbackup --password --backup-dir=/backupdir/compressed --compress backup-and-apply-log</copy>
     ```
 6. Because these backups are created with sudo, change the permissions
     ```
@@ -103,7 +103,7 @@ In this lab, you will:
 2. Restore the backup 
     We execute mysqlbackup as root because of permission in destination folders
     ```
-    <span style="color:green">shell></span><copy>sudo /mysql/mysql-latest/bin/mysqlbackup --defaults- file=/mysql/etc/my.cnf --backup-dir=/backupdir/full/ -- datadir=/mysql/data --log-bin=/mysql/binlog/binlog copy-back</copy>
+    <span style="color:green">shell></span><copy>sudo /mysql/mysql-latest/bin/mysqlbackup --defaults-file=/mysql/etc/my.cnf --backup-dir=/backupdir/full/ --datadir=/mysql/data --log-bin=/mysql/binlog/binlog copy-back</copy>
     ```
 
 3. Rename backup-auto.cnf and set et ownership and privileges

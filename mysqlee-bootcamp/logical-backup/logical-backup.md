@@ -20,6 +20,17 @@ In this lab, you will:
 
 ## Task 1: mysqldump
 
+If not already connected to app-srv and mysql1 then do the following
+- a. Connect with your SSH client using the public IP and the provided ssh Example of connections from Linux, MAC, Windows Powershell
+
+    ```
+    <span style="color:green">shell></span><copy> ssh -i id_rsa_app-srv opc@<public_ip></copy>
+    ```
+- b. Connect to <span style="color:green">shell-mysql1</span>
+    ```
+    <span style="color:green">shell-app-srv$</span><copy> ssh -i $HOME/sshkeys/id_rsa_mysql1 opc@mysql1 </copy>
+    ```
+
 1. Create the export folder
     ```
     <span style="color:green">shell></span><copy>sudo mkdir -p /mysql/exports</copy>
@@ -34,7 +45,10 @@ In this lab, you will:
     ```
     <span style="color:green">shell></span><copy>mysqldump -uadmin -p -hmysql1 -P3307 --single-transaction --events --routines --flush-logs --all-databases > /mysql/exports/full.sql</copy>
     ```
-3. Watch the content of the file /mysql/exports/full.sql
+3. view  the content of the file /mysql/exports/full.
+    ```
+    <span style="color:green">shell></span><copy>cat /mysql/exports/full.sql</copy>
+    ```
 4. Export employees database
     ```
     <span style="color:green">shell></span><copy>mysqldump -uadmin -p -hmysql1 -P3307 --single-transaction --set-gtid-purged=OFF --databases employees > /mysql/exports/employees.sql</copy>
@@ -63,7 +77,11 @@ In this lab, you will:
     ```
     <span style="color:blue">mysql></span><copy>show tables in employees;</copy>
     ```
-
+7. Exit MySQL
+    ```
+    <span style="color:blue">mysql></span><copy>exit</copy>
+    ```
+    
 ## Task 2: MySQL Shell
 1. Connect with MySQL Shell
     ```

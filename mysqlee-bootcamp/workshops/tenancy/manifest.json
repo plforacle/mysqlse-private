@@ -8,68 +8,68 @@
             "filename": "../../introduction/introduction.md"
         },
         {
-            "title": "Get Started",
+            "title": "Lab 1: Download material and test lab connection ",
             "description": "First steps",
             "filename": "../../get-started/get-started.md"
         },
         {
-            "title": "Lab 1a: Install MySQL Community",
+            "title": "Lab 2a: Install MySQL Community",
             "filename": "../../install-community/install-community.md"
         },
         {
-            "title": "Lab 1b: Install MySQL Enterprise",
+            "title": "Lab 2b: Install MySQL Enterprise",
             "filename": "../../installation-detailed/installation-detailed.md"
         },
         {
-            "title": "Lab 1c: Verify the new MySQL Installation",
+            "title": "Lab 2c: Verify the new MySQL Installation",
             "filename": "../../verify-installation/verify-installation.md"
         },
         {
-            "title": "Lab 1d: MySQL Shell",
+            "title": "Lab 2d: MySQL Shell",
             "filename": "../../mysql-shell/mysql-shell.md"
         },
         {
-            "title": "Lab 2: Database Design",
+            "title": "Lab 3: Database Design",
             "filename": "../../database-design/database-design.md"
         },
         {
-            "title": "Lab 3a: User management",
+            "title": "Lab 4a: User management",
             "filename": "../../user-management/user-management.md"
         },
         {
-            "title": "Lab 3b: MySQL Enterprise Firewall",
+            "title": "Lab 4b: MySQL Enterprise Firewall",
             "filename": "../../enterprise-firewall/enterprise-firewall.md"
         },
         {
-            "title": "Lab 3c: MySQL Enterprise Audit",
+            "title": "Lab 4c: MySQL Enterprise Audit",
             "filename": "../../enterprise-audit/enterprise-audit.md"
         },
         {
-            "title": "Lab 3d: MySQL Enterprise Mask and De-identification",
+            "title": "Lab 4d: MySQL Enterprise Mask and De-identification",
             "filename": "../../enterprise-datamask/enterprise-datamask.md"
         },
         {
-            "title": "Lab 4a: MySQL Logical Backup",
+            "title": "Lab 5a: MySQL Logical Backup",
             "filename": "../../logical-backup/logical-backup.md"
         },
         {
-            "title": "Lab 4b: MySQL Enterprise Backup",
+            "title": "Lab 5b: MySQL Enterprise Backup",
             "filename": "../../enterprise-backup/enterprise-backup.md"
         },
         {
-            "title": "Lab 5: MySQL Replication",
+            "title": "Lab 6: MySQL Replication",
             "filename": "../../replication/replication.md"
         },
         {
-            "title": "Lab 6: MySQL InnoDB Cluster",
+            "title": "Lab 7: MySQL InnoDB Cluster",
             "filename": "../../innodb/innodb.md"
         },
         {
-            "title": "Lab 7a: MySQL Enterprise Monitor",
+            "title": "Lab 8: MySQL Enterprise Monitor",
             "filename": "../../enterprise-monitor-manager/enterprise-monitor-manager.md"
         },
         {
-            "title": "Lab 8: MySQL HeatWave",
+            "title": "Lab 9: MySQL HeatWave",
             "filename": "../../mysql-heatwave/mysql-heatwave.md"
         },
         {

@@ -56,7 +56,7 @@ In this lab, you will:
 2. <span style="color:red">mysql1 (source):</span> Create a backup of source in the shared folder to easily restore on the replica:
     * take a full backup of the source using MySQL Enterprise Backup in your NFS folder /workshop/backups:
     ```
-    <span style="color:green">shell-mysql1></span><copy>mysqlbackup --port=3307 --host=127.0.0.1 --protocol=tcp --user=mysqlbackup --password --backup- dir=/workshop/backups/mysql1_source backup</copy>
+    <span style="color:green">shell-mysql1></span><copy>mysqlbackup --port=3307 --host=127.0.0.1 --protocol=tcp --user=mysqlbackup --password --backup-dir=/workshop/backups/mysql1_source backup</copy>
     ```
 3. <span style="color:red">mysql2 (replica):</span> We now create the my.cnf, restore the backup create and configure the replica
     * It’s mandatory that each server in a replication topology have a unique server id. There is a copy of the my.cnf ready to be used. It’s a duplicate of the one used for mysql-advanced instance, with a different server_id
@@ -68,7 +68,7 @@ In this lab, you will:
     ```
     * restore the backup from share folder
     ```
-    <span style="color:green">shell-mysql2></span><copy>sudo /mysql/mysql-latest/bin/mysqlbackup --defaults-file=/mysql/etc/my.cnf --backup- dir=/workshop/backups/mysql1_source -- datadir=/mysql/data --log-bin=/mysql/binlog/binlog copy-back-and-apply-log</copy>
+    <span style="color:green">shell-mysql2></span><copy>sudo /mysql/mysql-latest/bin/mysqlbackup --defaults-file=/mysql/etc/my.cnf --backup-dir=/workshop/backups/mysql1_source --datadir=/mysql/data --log-bin=/mysql/binlog/binlog copy-back-and-apply-log</copy>
     ```
     ```
     <span style="color:green">shell-mysql2></span><copy>sudo chown -R mysqluser:mysqlgrp /mysql</copy>

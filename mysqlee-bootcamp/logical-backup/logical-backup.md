@@ -123,7 +123,7 @@ If not already connected to app-srv and mysql1 then do the following
 8. Now we can test the export.
     Please note the time required.
     ```
-    <span style="color:green">shell></span><copy>time mysqldump --login-path=mysql1 --single-transaction -- set-gtid-purged=OFF --databases employees > /mysql/exports/employees_time_test.sql</copy>
+    <span style="color:green">shell></span><copy>time mysqldump --login-path=mysql1 --single-transaction --set-gtid-purged=OFF --databases employees > /mysql/exports/employees_time_test.sql</copy>
     ```
 9. And now drop the database and test the import. 
     Please note the time required.

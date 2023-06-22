@@ -77,7 +77,7 @@ In this lab, you will:
     ```
     <span style="color:green">shell></span><copy>du -sh *</copy>
     ```
-## Task 2: Restone
+## Task 2: Restore
 1.  Stop the server
     ```
     <span style="color:green">shell></span><copy>sudo systemctl stop mysqld-advanced</copy>

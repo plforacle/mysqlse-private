@@ -115,7 +115,7 @@ In this lab, you will:
 
 1. If not already connected, connect to app-srv and retrieve the Private IP with the OCI dashboard or the linux command. This IP will be used to connect the agent to the Monitor Service
     ```
-    <span style="color:green">shell-app-srv$</span><copy>ifconfig | grep 10.0.0</copy>
+    <span style="color:green">shell-app-srv$</span><copy>ifconfig | grep 10.0.10</copy>
     ```
 
     Write down the App-srv PRIVATE ip (client_ip)

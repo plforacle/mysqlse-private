@@ -170,7 +170,7 @@ In this lab, you will:
 4.  Add some load on your server to watch graphics change
     * From app-srv run the test tool “mysqlslap”, available in all MySQL server and client installations (below command is expected to run for a long time, to give you the time to see the peak):
         ```
-        <span style="color:green">shell-app-srv$</span><copy>mysqlslap --user=admin --password --host=app-srv --port=6446 --concurrency=20 --iterations=30 --number-int-cols=5 --number-char-cols=20 --auto-generate-sql --auto-generate-sql- guid-primary</copy>
+        <span style="color:green">shell-app-srv$</span><copy>mysqlslap --user=admin --password --host=app-srv --port=6446 --concurrency=20 --iterations=30 --number-int-cols=5 --number-char-cols=20 --auto-generate-sql --auto-generate-sql-guid-primary</copy>
         ```
     * Check behavior in MEM, can you see the peaks?
 

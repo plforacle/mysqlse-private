@@ -2,7 +2,7 @@
 
 ## About this Workshop
 
-MySQL is the world's most popular open source database, it powers many of the most accessed applications.
+MySQL is the world's most popular open source database (source [dbengines.com](https://db-engines.com/en/ranking)), it powers many of the most accessed applications.
 
 MySQL Community Edition is available under the GPL license and is supported by a huge and active community of open source developers.
 

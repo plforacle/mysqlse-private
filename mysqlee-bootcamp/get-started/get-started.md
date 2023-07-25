@@ -34,9 +34,9 @@ Connect with your SSH client using the public IP and the provided ssh key.
         ```
         <span style="color:green">shell></span><copy>chmod 600 id_rsa_app-srv</copy>
         ```
-Note: In case you receive the Windows Powershell SSH error "Permissions for ... are too open" follow instruction at [this link](../addendum/addendum.md#task-troubleshooting-windows-powershell-ssh-error-on-permissions) to fix. 
+      **Note:** In case you receive the Windows Powershell SSH error "Permissions for ... are too open" follow instruction at [this link](../addendum/addendum.md#task-troubleshooting-windows-powershell-ssh-error-on-permissions) to fix. 
 
-* Example of connections using PUTTY can be found in the addendum 1 of this workshop.
+      **Note:** Example of connections using PUTTY can be found in the [addendum 1](../addendum/addendum.md#task-putty-configuration) of this workshop.
 
 ## Task 3: Test "ask for help"
 Zoom break-out rooms are isolated each other.

@@ -21,31 +21,41 @@ In this lab, you will be guided trough the following tasks:
 ## Task 1: Install MySQL Enterprise
 
 1. If not already connected, connect to mysql1 server trhougth app-srv
+
     ```
     <span style="color:green">shell-app-srv$</span><copy> ssh -i $HOME/sshkeys/id_rsa_mysql1 opc@mysql1 </copy>
     ```
+    
 2. On Oracle Linux8/RHEL8/Centos 8 is required to install ncurses-compat-libs to use the tar package (not for the rpms)
+
     ```
     <span style="color:green">shell-mysql1></span><copy> sudo yum install -y ncurses-compat-libs </copy>
     ```
+
 3. Usually, to run mysql is used the user “mysql”, but because he’s already available we show here how create a new one.
 Create a new user/group for your MySQL service (mysqluser/mysqlgrp) and a add ‘mysqlgrp’ group to opc to help labs execution
+
     ```
     <span style="color:green">shell-mysql1></span><copy> sudo groupadd mysqlgrp </copy>
     ```
+
     ```
     <span style="color:green">shell-mysql1></span><copy> sudo useradd -r -g mysqlgrp -s /bin/false mysqluser </copy>
     ```
+
     ```
     <span style="color:green">shell-mysql1></span><copy> sudo usermod -a -G mysqlgrp opc </copy>
     ```
+
 4. Create new directory structure:
     ```
     <span style="color:green">shell-mysql1></span><copy> sudo mkdir /mysql/ /mysql/etc /mysql/data </copy>
     ```
+
     ```
     <span style="color:green">shell-mysql1></span><copy>sudo mkdir /mysql/log /mysql/temp /mysql/binlog </copy>
     ```
+
 5. To simplify the lab, add the mysql bin folder to the bash profile and customize the client prompt. Please insert these lines at the end of the file /home/opc/.bashrc
     ```
     <copy>export PATH=$PATH:/mysql/mysql-latest/bin</copy>

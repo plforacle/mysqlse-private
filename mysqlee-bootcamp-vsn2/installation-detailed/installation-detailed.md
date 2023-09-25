@@ -93,30 +93,39 @@ Please note that, because the port 3306 is already in use by the community serve
     ```
     <span style="color:green">shell-mysql1></span><copy>sudo chmod -R 770 /mysql/etc </copy>
     ```
-12. Save the changes, log out and log in again from the ssh for the changes to take effect on the user profile.initialize your database
+12. Save the changes
     ```
     <span style="color:green">shell-mysql1></span><copy>sudo /mysql/mysql-latest/bin/mysqld --defaults-file=/mysql/etc/my.cnf --initialize --user=mysqluser </copy>
     ```
-13. Start your new mysql instance
+13. <span style="color:red">Log out ssh</span>
+    ```
+    <span style="color:green">shell-mysql1></span><copy>exit</copy>
+    ```
+14. <span style="color:red">Log in again from the ssh for the changes to take effect on the user profile.initialize </span>
+
+    ```
+    <span style="color:green">shell-app-srv$</span><copy> ssh -i $HOME/sshkeys/id_rsa_mysql1 opc@mysql1 </copy>
+    ```
+15. Start your new mysql instance
     ```
     <span style="color:green">shell-mysql1></span><copy>sudo /mysql/mysql-latest/bin/mysqld --defaults-file=/mysql/etc/my.cnf --user=mysqluser & </copy>
     ```
-14. Verify that process is running
+16. Verify that process is running
     ```
     <span style="color:green">shell-mysql1></span><copy>ps -ef | grep mysqld </copy>
     ```
     ```
     <span style="color:green">shell-mysql1></span><copy>netstat -an | grep 3307 </copy>
     ```
-15. Another way is searching the message “ready for connections” in error log as one of the last
+17. Another way is searching the message “ready for connections” in error log as one of the last
     ```
     <span style="color:green">shell-mysql1></span><copy>grep -i ready /mysql/log/err_log.log </copy>
     ```
-16. Retrieve root password for first login
+18. Retrieve root password for first login
     ```
     <span style="color:green">shell-mysql1></span><copy>grep -i 'temporary password' /mysql/log/err_log.log</copy>
     ```
-17. Before version 5.7 it was recommended to run the ' mysql\_secure\_installation ' script. From version 5.7 all these settings are “by default”, but the script can be used also to setup the validate\_password plugin (used later).
+19. Before version 5.7 it was recommended to run the ' mysql\_secure\_installation ' script. From version 5.7 all these settings are “by default”, but the script can be used also to setup the validate\_password plugin (used later).
     Execute now mysql\_secure\_installation
     ```
     <span style="color:green">shell-mysql1></span><copy>/mysql/mysql-latest/bin/mysql_secure_installation -h127.0.0.1 -P3307</copy>
@@ -132,21 +141,21 @@ Please note that, because the port 3306 is already in use by the community serve
     * Remove test database: Y
     * Reload privilege tables now: Y
 
-18. Login to you mysql-advanced installation and check the status.
+20. Login to you mysql-advanced installation and check the status.
     ```
     <span style="color:green">shell-mysql1></span><copy>mysql -uroot -p -h 127.0.0.1 -P3307</copy>
     ```
     ```
     <span style="color:blue">mysql></span><copy>status</copy>
     ```
-19. Shutdown the service
+21. Shutdown the service
     ```
     <span style="color:blue">mysql></span><copy>exit</copy>
     ```
     ```
     <span style="color:green">shell-mysql1></span><copy>mysqladmin -uroot -h127.0.0.1 -p -P3307 shutdown</copy>
     ```
-20. Configure automatic startup and shutdown with system.
+22. Configure automatic startup and shutdown with system.
 Add a systemd service unit configuration file with details about the MySQL service. The file is named mysqld.service and is placed in /usr/lib/systemd/system. We created one for you (See addendum for the content)
     ```
     <span style="color:green">shell-mysql1></span><copy>sudo cp /workshop/support/mysqld-advanced.service /usr/lib/systemd/system/</copy>
@@ -158,7 +167,7 @@ Add a systemd service unit configuration file with details about the MySQL servi
     <span style="color:green">shell-mysql1></span><copy>sudo systemctl enable mysqld-advanced.service</copy>
     ```
 
-21. Test start, stop and restart
+23. Test start, stop and restart
     ```
     <span style="color:green">shell-mysql1></span><copy>sudo systemctl start mysqld-advanced</copy>
     ```
@@ -177,7 +186,7 @@ Add a systemd service unit configuration file with details about the MySQL servi
     ```
     <span style="color:green">shell-mysql1></span><copy>sudo systemctl status mysqld-advanced</copy>
     ```
-22. Create a new administrative user called 'admin' with remote access and full privileges
+24. Create a new administrative user called 'admin' with remote access and full privileges
     ```
     <span style="color:green">shell-mysql1></span><copy>mysql -uroot -p -h 127.0.0.1 -P3307</copy>
     ```
@@ -187,7 +196,7 @@ Add a systemd service unit configuration file with details about the MySQL servi
     ```
     <span style="color:blue">mysql></span><copy>GRANT ALL PRIVILEGES ON *.* TO 'admin'@'%' WITH GRANT OPTION;</copy>
     ```
-23. In the configuration file was specified to load the commercial Thread Pool Plugin, check if it’s loaded and active. We use here the same command with different output (“;” vs “\G” as line termination)
+25. In the configuration file was specified to load the commercial Thread Pool Plugin, check if it’s loaded and active. We use here the same command with different output (“;” vs “\G” as line termination)
     ```
     <span style="color:blue">mysql></span><copy>select * from information_schema.plugins where plugin_name like 'thread%';</copy>
     ```

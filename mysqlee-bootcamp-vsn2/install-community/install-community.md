@@ -22,6 +22,9 @@ In this lab, you will be guided through the following tasks:
 ## Task 1: Install MySQL Community
 
 1. Open an SSH client to app-srv
+	```
+    <span style="color:green">shell></span><copy> ssh -i id_rsa_app-srv opc@<public_ip></copy>
+    ```
 
 2. Connect to <span style="color:green">shell-mysql1</span>
 

@@ -90,7 +90,7 @@ In this lab, you will execute MySQL Shell and explore the following on the inter
     <span style="color:blue">My</span><span style="color: orange">SQL </span><span style="color:white"><span style="background-color:orange">SQL</span></span>><copy>\py</copy>
     ```
     ```
-    <span style="color:blue">My</span><span style="color: orange">SQL </span><span style="color:white"><span style="background-color:blue">Py</span></span>><copy>\py</copy>
+    <span style="color:blue">My</span><span style="color: orange">SQL </span><span style="color:white"><span style="background-color:blue">Py</span></span>><copy>\js</copy>
     ```
 5. Exit from MySQL Shell with “\q” or “\exit”
     ```

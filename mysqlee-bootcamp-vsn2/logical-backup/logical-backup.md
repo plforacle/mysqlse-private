@@ -45,15 +45,20 @@ If not already connected to app-srv and mysql1 then do the following
     ```
     <span style="color:green">shell></span><copy>mysqldump -uadmin -p -hmysql1 -P3307 --single-transaction --events --routines --flush-logs --all-databases > /mysql/exports/full.sql</copy>
     ```
-3. view  the content of the file /mysql/exports/full.
+3. Cat the content of the file /mysql/exports/full. **It will take forever to complete the display and difficult to read/follow ... Skip step 3 and go to step 4**
     ```
     <span style="color:green">shell></span><copy>cat /mysql/exports/full.sql</copy>
     ```
-4. Export employees database
+4. View  the content of the file /mysql/exports/full. **View instead, gives a general idea of what the backup script looks like.**
+    ```
+    <span style="color:green">shell></span><copy>view /mysql/exports/full.sql</copy>
+    ```
+
+5. Export employees database
     ```
     <span style="color:green">shell></span><copy>mysqldump -uadmin -p -hmysql1 -P3307 --single-transaction --set-gtid-purged=OFF --databases employees > /mysql/exports/employees.sql</copy>
     ```
-5. Drop employees database
+6. Drop employees database
     ```
     <span style="color:green">shell></span><copy>mysql -uadmin -p -hmysql1 -P3307</copy>
     ```
@@ -66,7 +71,7 @@ If not already connected to app-srv and mysql1 then do the following
     ```
     <span style="color:blue">mysql></span><copy>show databases;</copy>
     ```
-6. Import the employees database.
+7. Import the employees database.
     It can be done in shell (as when we loaded first example data) or from within the mysql client.
     ```
     <span style="color:blue">mysql></span><copy>SOURCE /mysql/exports/employees.sql</copy>
@@ -77,7 +82,7 @@ If not already connected to app-srv and mysql1 then do the following
     ```
     <span style="color:blue">mysql></span><copy>show tables in employees;</copy>
     ```
-7. Exit MySQL
+8. Exit MySQL
     ```
     <span style="color:blue">mysql></span><copy>exit</copy>
     ```

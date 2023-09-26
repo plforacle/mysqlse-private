@@ -189,9 +189,6 @@ In this lab, you will:
     <span style="color:blue">mysql></span><copy>SHOW DATABASES;</copy>
     ```
     ```
-    <span style="color:blue">mysql></span><copy>SHOW DATABASES;</copy>
-    ```
-    ```
     <span style="color:blue">mysql></span><copy>SELECT current_role();</copy>
     ```
 5. Set the role for the user and repeat above commands

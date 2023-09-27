@@ -96,8 +96,7 @@ In this lab, you will:
     ```
     <span style="color:blue">mysql></span><copy>\q</copy>
     ```
-17. If you are not connected to mysql1, do it now
-18. Create partitions:
+17. Create partitions:
     * Check the files for the city_part table on your disk
         ```
         <span style="color:green">shell-mysql1></span><copy>ls -l /mysql/data/world</copy>

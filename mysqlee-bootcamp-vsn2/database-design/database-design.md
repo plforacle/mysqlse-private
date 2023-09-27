@@ -92,17 +92,29 @@ In this lab, you will:
     ```
     <span style="color:blue">mysql></span><copy>ANALYZE TABLE city_part;</copy>
     ```
-16. If you are not connected to mysql1, do it now
-17. Create partitions:
+16. Exit MySQL
+    ```
+    <span style="color:blue">mysql></span><copy>\q</copy>
+    ```
+17. If you are not connected to mysql1, do it now
+18. Create partitions:
     * Check the files for the city_part table on your disk
         ```
         <span style="color:green">shell-mysql1></span><copy>ls -l /mysql/data/world</copy>
         ```
+    * Connect to <span style="color:green">shell-mysql1</span>
+
+        ```
+        <span style="color:green">shell-app-srv$</span><copy> ssh -i $HOME/sshkeys/id_rsa_mysql1 opc@mysql1 </copy>
+        ```
     * Partition your table into 5 segments based on hash
         ```
-        <span style="color:green">shell-mysql1></span><copy>ALTER TABLE world.city_part PARTITION BY HASH (id) PARTITIONS 5;</copy>
+        <span style="color:blue">mysql></span><copy>ALTER TABLE world.city_part PARTITION BY HASH (id) PARTITIONS 5;</copy>
         ```
-    * Check the file of the city_part table on your disk
+    * Exit MySQL and Check the file of the city_part table on your disk
+        ```
+        <span style="color:blue">mysql></span><copy>\q</copy>
+        ```
         ```
         <span style="color:green">shell-mysql1></span><copy>ls -l /mysql/data/world</copy>
         ```

@@ -104,7 +104,7 @@ In this lab, you will:
     * Connect to <span style="color:green">shell-mysql1</span>
 
         ```
-        <span style="color:green">shell-app-srv$</span><copy> mysql -uadmin -p -P3307 -hmysql1 </copy>
+        <span style="color:green">shell></span><copy>mysql -uadmin -p -P3307 -hmysql1</copy>
         ```
     * Partition your table into 5 segments based on hash
         ```

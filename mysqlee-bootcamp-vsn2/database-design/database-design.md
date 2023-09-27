@@ -16,74 +16,84 @@ In this lab, you will:
   * Tasks 2 and 3 can be completed from app-srv
 
 ## Task 1: Work with SQL
-1. Now the lab start: connect to your <span style="color:red">mysql-advanced</span> with admin user
+1. Open an SSH client to app-srv
+	```
+    <span style="color:green">shell></span><copy> ssh -i id_rsa_app-srv opc@<public_ip></copy>
+    ```
+
+2. Connect to <span style="color:green">shell-mysql1</span>
+
+    ```
+    <span style="color:green">shell-app-srv$</span><copy> ssh -i $HOME/sshkeys/id_rsa_mysql1 opc@mysql1 </copy>
+    ```
+3. Now the lab start: connect to your <span style="color:red">mysql-advanced</span> with admin user
     ```
     <span style="color:green">shell></span><copy>mysql -uadmin -p -P3307 -hmysql1</copy>
     ```
-2. Create a new table poi
+4. Create a new table poi
      ```
     <span style="color:blue">mysql></span><copy>use world;</copy>
     ```
      ```
     <span style="color:blue">mysql></span><copy>CREATE TABLE if not exists poi (x Int, y INT, z INT);</copy>
     ```
-3. Add to the table a new column for id used for large integer values
+5. Add to the table a new column for id used for large integer values
      ```
     <span style="color:blue">mysql></span><copy>alter table poi add id bigint;</copy>
     ```
     ```
     <span style="color:blue">mysql></span><copy>ALTER TABLE poi ADD PRIMARY KEY (id);</copy>
     ```
-4. Create a copy of your city table
+6. Create a copy of your city table
     ```
     <span style="color:blue">mysql></span><copy>create table city_part as select * from city;</copy>
     ```
-5. How many records does it contain?
+7. How many records does it contain?
     ```
     <span style="color:blue">mysql></span><copy>SELECT count(*) FROM city_part;</copy>
     ```
-6. How many records city table contain?
+8. How many records city table contain?
     ```
     <span style="color:blue">mysql></span><copy>SELECT count(*) FROM city;</copy>
     ```
-7. Verify the difference of the two table creation (there is a big one!)
+9. Verify the difference of the two table creation (there is a big one!)
     ```
     <span style="color:blue">mysql></span><copy>show create table city\G</copy>
     ```
     ```
     <span style="color:blue">mysql></span><copy>show create table city_part\G</copy>
     ```
-8. Create an index on new table
+10. Create an index on new table
     ```
     <span style="color:blue">mysql></span><copy>CREATE INDEX myidindex ON city_part (ID);</copy>
     ```
-9. Check table statistics. What is the Cardinality (=unique records) of primary key?
+11. Check table statistics. What is the Cardinality (=unique records) of primary key?
     ```
     <span style="color:blue">mysql></span><copy>SELECT * FROM INFORMATION_SCHEMA.STATISTICS WHERE table_name ='city' and table_schema='world'\G</copy>
     ```
-10. Create a new index
+12. Create a new index
     ```
     <span style="color:blue">mysql></span><copy>CREATE INDEX myccindex ON city_part (CountryCode);</copy>
     ```
-11. Delete some columns (Population and CountryCode)
+13. Delete some columns (Population and CountryCode)
     ```
     <span style="color:blue">mysql></span><copy>ALTER TABLE city_part DROP COLUMN Population;</copy>
     ```
     ```
     <span style="color:blue">mysql></span><copy>ALTER TABLE city_part DROP COLUMN CountryCode;</copy>
     ```
-12. Optimize the table
+14. Optimize the table
     ```
     <span style="color:blue">mysql></span><copy>OPTIMIZE TABLE city_part;</copy>
     ```
     > **Note:** warning is expected: https://dev.mysql.com/doc/refman/8.0/en/optimize-table.html
 
-13. Update table statistics
+15. Update table statistics
     ```
     <span style="color:blue">mysql></span><copy>ANALYZE TABLE city_part;</copy>
     ```
-14. If you are not connected to mysql1, do it now
-15. Create partitions:
+16. If you are not connected to mysql1, do it now
+17. Create partitions:
     * Check the files for the city_part table on your disk
         ```
         <span style="color:green">shell-mysql1></span><copy>ls -l /mysql/data/world</copy>

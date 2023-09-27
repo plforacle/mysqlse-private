@@ -326,7 +326,7 @@ In this lab, you will:
     ```
     <span style="color:blue">My</span><span style="color: orange">SQL </span><span style="background-color:yellow">JS</span>> <copy>cluster.status()</copy>
     ```
-9. Optional: restart "crashed" instance and verify with MySQL Shell how it changes the status
+9. "Crashed" instance will automatically restart. Verify with MySQL Shell and see how it changes the status
     ```
     <span style="color:blue">My</span><span style="color: orange">SQL </span><span style="background-color:yellow">JS</span>> <copy>cluster.status()</copy>
     ```

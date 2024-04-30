@@ -30,7 +30,7 @@ In this lab, you will:
 
 - On Oracle Linux8/RHEL8/Centos 8 is please install ncurses-compat-libs
     ```
-    <span style="color:green">shell-mysql1></span><copy> sudo yum install -y ncurses-compat-libs </copy>
+    <span style="color:green">shell-app-srv$</span><copy> sudo yum install -y ncurses-compat-libs </copy>
     ```
 1. Now we install the service. If not already connected, connect to app-srv with your SSH client
 2. Install the MySQL Enterprise Monitor Service Manager on app-srv

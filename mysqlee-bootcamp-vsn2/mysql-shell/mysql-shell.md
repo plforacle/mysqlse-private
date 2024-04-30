@@ -50,7 +50,7 @@ In this lab, you will execute MySQL Shell and explore the following on the inter
     ```
 7. Close and reopen the session and in the new one **uses the arrow up key** to verify that the data from previous session are available
     ```
-    <span style="color:blue">My</span><span style="color: orange">SQL </span><span style="background-color:yellow">JS</span>><copy>exit</copy>
+    <span style="color:blue">My</span><span style="color: orange">SQL </span><span style="background-color:yellow">JS</span>><copy>\q</copy>
     ```
     ```
     <span style="color:green">shell-mysql1></span><copy>mysqlsh</copy>
@@ -113,7 +113,7 @@ In this lab, you will execute MySQL Shell and explore the following on the inter
     <span style="color:blue">My</span><span style="color: orange">SQL </span><span style="color:white"><span style="background-color:orange">SQL</span></span>><copy>SHOW DATABASES;</copy>
     ```
     ```
-    <span style="color:blue">My</span><span style="color: orange">SQL </span><span style="color:white"><span style="background-color:orange">SQL</span></span>><copy>\exit</copy>
+    <span style="color:blue">My</span><span style="color: orange">SQL </span><span style="color:white"><span style="background-color:orange">SQL</span></span>><copy>\q</copy>
     ```
 7. From now on, if you like, the labs may be completed with MySQL Shell instead of classic mysql client.
 

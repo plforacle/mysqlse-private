@@ -101,6 +101,10 @@ Run this command but <span style="color:red"> don’t confirm </span>
     * Where is the database and the error log (mysqld.log) stored?
     * Check if there are error for the instance looking in the error log file
 
+    ```
+    <span style="color:green">shell-mysql1></span><copy>sudo cat /etc/my.cnf </copy>
+    ```
+
 2. Starting from MySQL 5.7 the default installation of MySQL Server generates a one-time password. You find it in error log notes above 
 
     ```
